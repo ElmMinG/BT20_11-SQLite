@@ -25,21 +25,21 @@
                 android:id="@+id/btn_add_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+ Text"
+                android:text="+Text"
                 android:layout_marginEnd="4dp"/>
 
             <Button
                 android:id="@+id/btn_add_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+ Img"
+                android:text="+Img"
                 android:layout_marginEnd="4dp"/>
 
             <Button
                 android:id="@+id/btn_add_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+ User"
+                android:text="+User"
                 android:layout_marginEnd="4dp"/>
 
             <Button
@@ -57,20 +57,54 @@
                 android:backgroundTint="#4CAF50"
                 android:layout_marginEnd="4dp"/>
 
-            <!-- NÚT BẠN ĐANG THIẾU ĐÂY -->
             <Button
                 android:id="@+id/btn_sqlite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SQLite"
-                android:backgroundTint="#673AB7"/>
+                android:backgroundTint="#673AB7"
+                android:layout_marginEnd="4dp"/>
+
             <Button
                 android:id="@+id/btn_file"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="File"
                 android:backgroundTint="#FF5722"
-                android:layout_marginStart="4dp"/>
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_async"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Async"
+                android:backgroundTint="#E91E63"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_volley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volley"
+                android:backgroundTint="#FF9800"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_login_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login API"
+                android:backgroundTint="#009688"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- NÚT BẠN ĐANG THIẾU ĐÂY -->
+            <Button
+                android:id="@+id/btn_retrofit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retrofit"
+                android:backgroundTint="#3F51B5"/>
+
         </LinearLayout>
     </HorizontalScrollView>
 

@@ -32,43 +32,72 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Ánh xạ các View chính
         myListView = findViewById(R.id.my_list_view);
         myGridView = findViewById(R.id.my_grid_view);
         myRecyclerView = findViewById(R.id.my_recycler_view);
         layoutButtons = findViewById(R.id.layout_buttons);
 
+        // Ánh xạ các nút chức năng
         Button btnAddText = findViewById(R.id.btn_add_text);
         Button btnAddImage = findViewById(R.id.btn_add_image);
         Button btnAddUser = findViewById(R.id.btn_add_user);
+
+        // Ánh xạ các nút chuyển màn hình
         Button btnOpenBinding = findViewById(R.id.btn_open_databinding);
         Button btnPref = findViewById(R.id.btn_pref);
-
         Button btnSQLite = findViewById(R.id.btn_sqlite);
+        Button btnFile = findViewById(R.id.btn_file);
+        Button btnAsync = findViewById(R.id.btn_async);
+        Button btnVolley = findViewById(R.id.btn_volley);
 
+        // --- THÊM NÚT LOGIN API ---
+        Button btnLoginApi = findViewById(R.id.btn_login_api);
 
-        // 1. Chuyển sang DataBinding
+        Button btnRetrofit = findViewById(R.id.btn_retrofit); // Nhớ thêm nút này vào activity_main.xml
+        btnRetrofit.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RetrofitActivity.class);
+            startActivity(intent);
+        });
+
+        // --- CÁC SỰ KIỆN CHUYỂN MÀN HÌNH ---
+
         btnOpenBinding.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, DataBindingActivity.class);
             startActivity(intent);
         });
 
-        // 2. Chuyển sang Shared Preferences
         btnPref.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SharedPreferencesActivity.class);
             startActivity(intent);
         });
 
-        // 3. Chuyển sang SQLite (Ghi chú)
         btnSQLite.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SQLiteActivity.class);
             startActivity(intent);
         });
 
-        Button btnFile = findViewById(R.id.btn_file);
         btnFile.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FileStorageActivity.class);
             startActivity(intent);
         });
+
+        btnAsync.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AsyncTaskActivity.class);
+            startActivity(intent);
+        });
+
+        btnVolley.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, VolleyActivity.class);
+            startActivity(intent);
+        });
+
+        // --- SỰ KIỆN CHO NÚT LOGIN API ---
+        btnLoginApi.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LoginAPIActivity.class);
+            startActivity(intent);
+        });
+
 
         // --- CHUẨN BỊ DỮ LIỆU CHO LISTVIEW/GRIDVIEW ---
         monHocArrayList = new ArrayList<>();
@@ -96,13 +125,10 @@ public class MainActivity extends AppCompatActivity {
             myRecyclerView.scrollToPosition(multiData.size() - 1);
         });
 
+
         // ============================================================
         // CHỌN DEMO ĐỂ CHẠY
         // ============================================================
-
-        // runListViewDemo();
-        // runGridViewDemo();
-        // runRecyclerViewDemo();
 
         runMultiViewTypeDemo(); // Đang chạy bài này
     }

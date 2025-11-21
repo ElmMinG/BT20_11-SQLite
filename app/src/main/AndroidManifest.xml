@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -24,18 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SharedPreferencesActivity"
-            android:exported="false" />
+
+        <activity android:name=".SharedPreferencesActivity" android:exported="false" />
         <activity android:name=".SQLiteActivity" android:exported="false" />
         <activity android:name=".FileStorageActivity" android:exported="false" />
-        <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
+        <activity android:name=".DetailActivity" android:exported="false" />
+        <activity android:name=".AsyncTaskActivity" android:exported="false" />
+        <activity android:name=".VolleyActivity" android:exported="false" />
+        <activity android:name=".DataBindingActivity" android:exported="false" />
+        <activity android:name=".LoginAPIActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
 
-        <activity
-            android:name=".DataBindingActivity"
-            android:exported="false" />
+        <!-- THÊM DÒNG NÀY ĐỂ CHẠY BÀI RETROFIT -->
+        <activity android:name=".RetrofitActivity" android:exported="false" />
 
     </application>
 
